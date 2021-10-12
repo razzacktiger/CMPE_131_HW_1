@@ -1,6 +1,9 @@
 import math
 def calculator(number1, number2, operator):
-    """Performs """
+    """Performs caluclations with *, **, /, //, %, -, +
+    Takes in three arguments: "number1, number2, operator"
+    returns result of operations 
+    """
     if number1.isdigit() and number2.isdigit():
         number1 = int(number1)
         number2 = int(number1)
@@ -23,7 +26,7 @@ def calculator(number1, number2, operator):
     return result 
 def parse_input():
     """
-    takes in user inout and parses it into arguments which are passed into the calculator 
+    Takes in user inout and parses it into arguments which are passed into the calculator 
     """
     request = input("Enter Equation: ")
     arguments = request.split()

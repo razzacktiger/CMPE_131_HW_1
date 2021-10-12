@@ -11,6 +11,5 @@ def tripler(func):
 
 @tripler
 def function():
+    """prints triple"""
     print('triple')
-
-function()
