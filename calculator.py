@@ -4,11 +4,6 @@ def calculator(number1, number2, operator):
     Takes in three arguments: "number1, number2, operator"
     returns result of operations 
     """
-    if number1.isdigit() and number2.isdigit():
-        number1 = int(number1)
-        number2 = int(number1)
-    else:
-        return False
     if operator == '+':               
         result = number1 + number2
     if operator == '-':
@@ -30,7 +25,12 @@ def parse_input():
     """
     request = input("Enter Equation: ")
     arguments = request.split()
-    print(calculator(arguments[0], arguments[2], arguments[1]))
+    if arguments[0].isdigit() and arguments[2].isdigit():
+        arguments[0] = int(arguments[0])
+        arguments[2] = int(arguments[2]) 
+        print(calculator(arguments[0], arguments[2], arguments[1]))
+    else:
+        return False 
 
 
 
