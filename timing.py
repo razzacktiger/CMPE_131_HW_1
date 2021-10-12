@@ -8,13 +8,13 @@ def calculate_time(func):
         func()
         End_time = time.time()
         TimeTook = End_time - Start_time 
-        print(f"Total time {TimeTook} ")
+        print(f"Total time {TimeTook} ") 
     return wrapper
 
 @calculate_time
 def some_func():
     """empty ucntion that takes 2 seconds to execute"""
-    time.sleep(2)
+    time.sleep(2) # uses 2 as a test to show the function should take atelast 2 seconds
 
 some_func()
 
