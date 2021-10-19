@@ -23,7 +23,10 @@ def calculator(number1, number2, operator):
     if operator == '**':
         result = number1 ** number2
     if operator == '%':
-        result = number1 % number2
+        if number2 == 0: # so that the input cannot request dividing by 0 
+            return False
+        else: 
+            result = number1 % number2
     return result 
 def parse_input():
     """
